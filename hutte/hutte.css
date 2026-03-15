@@ -1,0 +1,323 @@
+:root{
+    --head-background-color: #9A003D         ;
+    --head-font-color: #ffffff ;
+    --info-background-color: #9A003D          ;
+    --info-font-color: #EFEFEF ;
+    --background-color: #fffefe   ;
+    --font-color: #454545 ;
+    --topic-background-color: #ffffff    ;
+    --topic-font-color: #454545 ;
+    --sticky-color: #9A003D          ;
+    --btn-background-color: #9A003D           ;
+    --btn-font-color: #ffffff   ;
+    --btn-hover-color: #EFEFEF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/*     ==============================
+            ヘッダー
+===================================     */
+header{
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+.header-inner{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--head-background-color);
+    box-shadow: 0px 3px 3px -2px #aaa;
+    display: flex;
+    align-items: center;
+    padding: 0 20px; 
+    box-sizing: border-box;
+}
+
+.header-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: 80px;
+    padding-left: 25px;
+}
+
+.header-logo{
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header-emblem img {
+    height: 70px ; 
+    width: auto;
+    display: block;
+}
+
+.site-title {
+    display: block; 
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--head-font-color);
+    line-height: 1.1;
+    font-family: "Times New Roman", serif;
+}
+
+.en-title {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--head-font-color);
+    letter-spacing: 0.05em;
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+}
+
+.humburger-info{
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    color: var(--info-font-color);
+    background-color: var(--head-background-color);
+    border: 1px solid var(--head-font-color);
+    border-radius: 50%;
+    position: fixed;
+    top: 19px;
+    right: 15px;
+    z-index: 1005;
+
+}
+
+
+/*       humburger-bottun       */
+.nav-toggle{
+    display: block;
+    position: relative;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+}
+.nav-toggle i{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--head-font-color);
+    position: absolute;
+    transform-origin: center center;
+    transition: transform .5s, opacity .5s;
+}
+.nav-toggle i:nth-child(1){
+    top: 0;
+}
+.nav-toggle i:nth-child(2){
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.nav-toggle i:nth-child(3){
+    bottom: 0;
+}
+/* クリック後、傾きを変える */
+.nav-toggle.show i:nth-child(1){
+    transform: translateY(9.5px) rotate(-45deg);
+}
+.nav-toggle.show i:nth-child(2){
+    opacity: 0;
+}
+.nav-toggle.show i:nth-child(3){
+    transform: translateY(-9.5px) rotate(45deg);
+}
+
+.nav{
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s, ;  /*  変化させるプロパティと時間を指定 */
+    
+}
+.nav.show{
+    background: var(--info-background-color);
+    color: var(--info-font-color);
+    opacity: 1;
+    visibility: visible;
+    z-index: 101;
+}
+
+.nav-menu-li{
+    border-top: 2px solid var(--info-font-color);
+    text-align: center;
+    width: 100%;
+    padding: 20px 0px;
+}
+.nav-menu-li a{
+    color: var(--info-font-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+
+/*     ==============================
+            メイン
+===================================     */
+main{
+    margin-top: 50px;
+    width: 100%;
+}
+.container{
+    background-color: var(--background-color);
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 1.8rem;
+}
+.top-line{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.topic{
+    margin-bottom: 2rem;
+}
+
+.headline{
+    font-size: 1.4em;
+    font-weight: lighter;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+hr{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+.topic-img{
+    width: 100%;
+    margin-bottom: 1rem;
+
+}
+/* main-topics */
+
+.sns{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.sns li{
+    padding: 20px 20px;
+}   
+
+.map-container {
+    width: 100%;
+    max-width: 800px;   /* ★PCでの最大横幅を制限 */
+    margin: 20px auto;  /* ★中央寄せにする */
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.map-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff; /* 背景色 */
+    color: #333333;           /* 文字色 */
+    border: 1px solid #ccc;    /* 枠線 */
+    border-radius: 4px;        /* 角を少し丸める */
+    text-decoration: none;     /* 下線を消す */
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 軽い影 */
+    transition: background-color 0.3s;
+}
+
+.map-btn:hover {
+    background-color: #f0f0f0; /* カーソルを乗せた時の色 */
+    text-decoration: underline;
+}
+
+/* 画像を横並びにする親要素の設定 */
+.img-flex-group {
+    display: flex !important;  /* 強制的にFlexboxにする */
+    flex-direction: row;       /* 横方向に並べる */
+    flex-wrap: wrap;           /* 幅が狭い時は折り返す */
+    gap: 10px;                 /* 画像の間の隙間 */
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* --- 画像自体の設定（ここを書き換え） --- */
+.responsive-img {
+    flex: 1;
+    min-width: 200px; 
+    max-width: calc(50% - 10px); 
+    height: auto;
+    object-fit: cover;
+    width: auto !important; 
+}
+
+/* スマホ用の微調整 */
+@media (max-width: 600px) {
+    .responsive-img {
+        max-width: 100% !important;
+        min-width: 100%;
+        width: 100% !important;
+    }
+}
+
+
+ /*     ==============================
+            フッター
+===================================     */
+footer {
+    padding: 60px 0;
+    text-align: center;
+    color: #aaa;
+}
+
+ /* PC用CSS */
+ @media screen and (min-width: 600px){
+     .container{
+         margin: 0 auto;
+         width: 90%;
+         max-width: 960px;
+     }
+
+     .topic-box{
+         margin-left : 10px;
+         margin-right : 10px;
+         max-width: 960px;
+     }
+ 
+ .topic-box{
+     display: flex;
+     padding: 30px;
+     margin: 0 auto;
+ }
+ .box-img{
+     width: 100%;
+     height: 100%;
+     margin-bottom: 0px;
+     margin-right: 10px;
+     object-fit: cover;
+ }
+ .box-txt{
+     padding: 20px;
+ }
+ 
+}

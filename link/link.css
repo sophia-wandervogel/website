@@ -1,0 +1,315 @@
+:root{
+    --head-background-color: #9A003D         ;
+    --head-font-color: #ffffff ;
+    --info-background-color: #9A003D          ;
+    --info-font-color: #EFEFEF ;
+    --background-color: #fffefe   ;
+    --font-color: #454545 ;
+    --topic-background-color: #ffffff    ;
+    --topic-font-color: #454545 ;
+    --sticky-color: #9A003D          ;
+    --btn-background-color: #9A003D           ;
+    --btn-font-color: #ffffff   ;
+    --btn-hover-color: #EFEFEF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/*     ==============================
+            ヘッダー
+===================================     */
+header{
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+.header-inner{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--head-background-color);
+    box-shadow: 0px 3px 3px -2px #aaa;
+    display: flex;
+    align-items: center;
+    padding: 0 20px; 
+    box-sizing: border-box;
+}
+
+.header-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: 80px;
+    padding-left: 25px;
+}
+
+.header-logo{
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header-emblem img {
+    height: 70px ; 
+    width: auto;
+    display: block;
+}
+
+.site-title {
+    display: block; 
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--head-font-color);
+    line-height: 1.1;
+    font-family: "Times New Roman", serif;
+}
+
+.en-title {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--head-font-color);
+    letter-spacing: 0.05em;
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+}
+
+.humburger-info{
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    color: var(--info-font-color);
+    background-color: var(--head-background-color);
+    border: 1px solid var(--head-font-color);
+    border-radius: 50%;
+    position: fixed;
+    top: 19px;
+    right: 15px;
+    z-index: 1005;
+
+}
+
+
+/*       humburger-bottun       */
+.nav-toggle{
+    display: block;
+    position: relative;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+}
+.nav-toggle i{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--head-font-color);
+    position: absolute;
+    transform-origin: center center;
+    transition: transform .5s, opacity .5s;
+}
+.nav-toggle i:nth-child(1){
+    top: 0;
+}
+.nav-toggle i:nth-child(2){
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.nav-toggle i:nth-child(3){
+    bottom: 0;
+}
+/* クリック後、傾きを変える */
+.nav-toggle.show i:nth-child(1){
+    transform: translateY(9.5px) rotate(-45deg);
+}
+.nav-toggle.show i:nth-child(2){
+    opacity: 0;
+}
+.nav-toggle.show i:nth-child(3){
+    transform: translateY(-9.5px) rotate(45deg);
+}
+
+.nav{
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s, ;  /*  変化させるプロパティと時間を指定 */
+    
+}
+.nav.show{
+    background: var(--info-background-color);
+    color: var(--info-font-color);
+    opacity: 1;
+    visibility: visible;
+    z-index: 101;
+}
+
+.nav-menu-li{
+    border-top: 2px solid var(--info-font-color);
+    text-align: center;
+    width: 100%;
+    padding: 20px 0px;
+}
+.nav-menu-li a{
+    color: var(--info-font-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+
+/*     ==============================
+            メイン
+===================================     */
+main{
+    margin-top: 80px;
+    width: 100%;
+}
+.container{
+    background-color: var(--background-color);
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 1.8rem;
+}
+.top-line{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.topic{
+    margin-bottom: 2rem;
+}
+
+/* --- 見出し（「上智大学関連」など）のスタイル修正 --- */
+.headline {
+    font-family: "Hannari", "Times New Roman", serif; /* ヘッダーの Hannari や明朝系を混ぜて高級感を出す */
+    font-size: 1.3rem;      /* 大きすぎず、すっきりしたサイズ */
+    font-weight: 700;       /* 太めにして視認性を確保 */
+    letter-spacing: 0.15em; /* 文字の間隔を広げて「かっこよさ」を演出 */
+    color: #1a2433;         /* サポートカラーのネイビー */
+    margin-top: 2.5rem;     /* 前のコンテンツとの余白 */
+    margin-bottom: 1.2rem;  /* リストとの余白 */
+    padding-left: 0.8rem;   /* 左側の余白 */
+    border-left: 4px solid var(--head-background-color); /* スクールカラーの縦線 */
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+}
+
+/* headline直下のボーダーを消す（border-leftと重複するため） */
+.under-border {
+    display: none; 
+}
+hr{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* main-topics */
+
+.sns{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.sns li{
+    padding: 20px 20px;
+}   
+
+/* リンク集全体のリスト設定 */
+.sophia-style-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 40px 0;
+}
+
+.sophia-style-list li {
+    margin-bottom: 12px;
+}
+
+/* リンクボタンのデザイン */
+.sophia-style-list a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #1a2433;
+    background-color: #f0f2f5;
+    padding: 18px 20px;
+    border: 1px solid #e0e0e0; /* 薄い枠線 */
+    border-left: 6px solid var(--head-background-color); /* 左側のエンジ色のアクセント */
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03); /* さりげない影 */
+}
+
+/* ホバー（マウスを乗せた時）の動き */
+.sophia-style-list a:hover {
+    background-color: #ffffff; /* ほんのり赤みのある背景 */
+    border-color: var(--head-background-color);
+    transform: translateX(5px); /* 右に少しスライド */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* 影を強調 */
+    color: var(--head-background-color); /* 文字もエンジ色に */
+}
+
+/* 行頭に「○」の代わりに矢印アイコンを入れる（自動挿入） */
+.sophia-style-list a::before {
+    content: "●";
+    margin-right: 15px;
+    font-size: 0.7rem;
+    color: var(--head-background-color);
+}
+ 
+ /*     ==============================
+            フッター
+===================================     */
+footer {
+    padding: 60px 0;
+    text-align: center;
+    color: #aaa;
+}
+
+ /* PC用CSS */
+ @media screen and (min-width: 600px){
+     .container{
+         margin: 0 auto;
+         width: 90%;
+         max-width: 960px;
+     }
+     .topic-box{
+         margin-left : 10px;
+         margin-right : 10px;
+         max-width: 960px;
+     }
+ 
+ .topic-box{
+     display: flex;
+     padding: 30px;
+     margin: 0 auto;
+ }
+ .box-img{
+     width: 100%;
+     height: 100%;
+     margin-bottom: 0px;
+     margin-right: 10px;
+     object-fit: cover;
+ }
+ .box-txt{
+     padding: 20px;
+ }
+ 
+}
