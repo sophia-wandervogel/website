@@ -1,196 +1,12 @@
-:root {
-    --head-background-color: #9A003D;
-    --head-font-color: #ffffff;
-    --info-background-color: #9A003D;
-    --info-font-color: #EFEFEF;
-    --background-color: #fffefe;
-    --font-color: #454545;
-    --topic-background-color: #ffffff;
-    --topic-font-color: #454545;
-    --sticky-color: #9A003D;
-    --btn-background-color: #9A003D;
-    --btn-font-color: #ffffff;
-    --btn-hover-color: #EFEFEF;
-}
+/* activity-contents.css — ページ固有スタイルのみ（共通部分は header.css に集約済み） */
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-/*     ==============================
-            ヘッダー
-===================================     */
-header {
-    position: relative;
-    width: 100%;
-    z-index: 1000;
-
-}
-
-.header-inner {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background-color: var(--head-background-color);
-    box-shadow: 0px 3px 3px -2px #aaa;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.header-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: auto;
-    height: 80px;
-    padding-left: 25px;
-}
-
-.header-logo {
-    width: auto;
-    display: flex;
-    align-items: center;
-}
-
-.header-emblem img {
-    height: 70px;
-    width: auto;
-    display: block;
-}
-
-.site-title {
-    display: block;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--head-font-color);
-    line-height: 1.1;
-    font-family: "Times New Roman", serif;
-}
-
-.en-title {
-    margin: 0;
-    font-size: 1rem;
-    color: var(--head-font-color);
-    letter-spacing: 0.05em;
-    font-family: "Times New Roman", serif;
-    font-weight: bold;
-}
-
-.humburger-info {
-    cursor: pointer;
-    width: 42px;
-    height: 42px;
-    color: var(--info-font-color);
-    background-color: var(--head-background-color);
-    border: 1px solid var(--head-font-color);
-    border-radius: 50%;
-    position: fixed;
-    top: 19px;
-    right: 15px;
-    z-index: 1005;
-}
-
-
-/*       humburger-bottun       */
-.nav-toggle {
-    display: block;
-    position: relative;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    height: 50%;
-}
-
-.nav-toggle i {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: var(--head-font-color);
-    position: absolute;
-    transform-origin: center center;
-    transition: transform .5s, opacity .5s;
-}
-
-.nav-toggle i:nth-child(1) {
-    top: 0;
-}
-
-.nav-toggle i:nth-child(2) {
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-
-.nav-toggle i:nth-child(3) {
-    bottom: 0;
-}
-
-/* クリック後、傾きを変える */
-.nav-toggle.show i:nth-child(1) {
-    transform: translateY(9.5px) rotate(-45deg);
-}
-
-.nav-toggle.show i:nth-child(2) {
-    opacity: 0;
-}
-
-.nav-toggle.show i:nth-child(3) {
-    transform: translateY(-9.5px) rotate(45deg);
-}
-
-.nav {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .5s, visibility .5s, ;
-    /*  変化させるプロパティと時間を指定 */
-
-}
-
-.nav.show {
-    background: var(--info-background-color);
-    color: var(--info-font-color);
-    opacity: 1;
-    visibility: visible;
-    z-index: 101;
-}
-
-.nav-menu-li {
-    border-top: 2px solid var(--info-font-color);
-    text-align: center;
-    width: 100%;
-    padding: 20px 0px;
-}
-
-.nav-menu-li a {
-    color: var(--info-font-color);
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-
-/*     ==============================
-            メイン
-===================================     */
 main {
-    margin-top: 50px;
+    margin-top: 80px;
     width: 100%;
 }
 
 .container {
-    background-color: var(--background-color);
+    background-color: transparent;
     padding-left: 13px;
     padding-right: 13px;
     padding-top: 1.8rem;
@@ -200,7 +16,6 @@ main {
 
 .top-info {
     border-left: 6px solid var(--head-background-color);
-    /* 左側に太いライン */
     padding-left: 15px;
     margin-bottom: 25px;
 }
@@ -212,11 +27,25 @@ main {
 }
 
 .headline {
-    font-size: 1.4em;
-    font-weight: lighter;
-    margin-top: 0.3rem;
-    margin-bottom: 0.5rem;
-    padding-left: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+    border-left: 4px solid var(--head-background-color);
+    padding-left: 12px;
+    line-height: 1.4;
+}
+
+.headline-bold {
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Noto Serif JP', serif;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--font-color);
+    border-left: 4px solid var(--head-background-color);
+    padding-left: 12px;
+    line-height: 1.4;
 }
 
 hr {
@@ -224,25 +53,21 @@ hr {
     margin-bottom: 1rem;
 }
 
+.topic + .topic,
+.topic-box + .topic {
+    margin-top: 3rem;
+}
+
+.topic-box {
+    margin-top: 3rem;
+}
+
 .topic-img {
     width: 100%;
     margin-bottom: 1rem;
 }
 
-.headline-bold {
-    font-weight: bold;
-    /* 太字にする */
-    font-size: 1.2rem;
-    /* 文字を大きくする（標準は1rem程度） */
-    margin-top: 1.5rem;
-    /* 見出しの上の余白を少し広げると読みやすくなります */
-    margin-bottom: 0.5rem;
-    /* 説明文との距離を少し詰める */
-    color: var(--font-color);
-    /* 既存の文字色に合わせる */
-}
-
-/* カードを縦に並べるコンテナ */
+/* 普段の活動カード */
 .activity-vertical-container {
     display: flex;
     flex-direction: column;
@@ -250,17 +75,22 @@ hr {
     margin-top: 20px;
 }
 
-/* カード全体のデザイン */
 .activity-card {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* 年間予定に近い影 */
-    overflow: hidden;
-    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* カード上部の色付け部分 */
+.activity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.activity-card .card-head:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
 .card-head {
     padding: 10px 20px;
     color: white;
@@ -268,24 +98,10 @@ hr {
     font-size: 1.1rem;
 }
 
-/* 各カードの色（年間予定の配色に合わせると◎） */
-.blue {
-    background-color: #a01d43;
-}
+.blue   { background-color: #a01d43; }
+.orange { background-color: #d35400; }
+.green  { background-color: #2d5a27; }
 
-/* 春・冬休みの赤系に合わせる場合 */
-.orange {
-    background-color: #d35400;
-}
-
-/* 夏休みのオレンジ系 */
-.green {
-    background-color: #2d5a27;
-}
-
-/* 山らしい緑 */
-
-/* カード内のテキスト余白 */
 .card-body {
     padding: 15px 20px;
 }
@@ -298,53 +114,11 @@ hr {
     padding-bottom: 5px;
 }
 
-
-/* --- 年間イベント：学期・休み別の新デザイン --- */
-
-/* PC用CSS (600px以上の画面) */
-@media screen and (min-width: 600px) {
-
-    /* 他の既存コードはそのまま... */
-
-    .term-container {
-        display: grid;
-        /* 絶対に4等分（1行に4枚）にする指定 */
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 15px;
-        /* 4枚並ぶので隙間は少し狭めに調整 */
-        width: 100%;
-        max-width: 1200px;
-        /* 画面が広すぎても崩れないようにガード */
-        margin: 30px auto;
-    }
-
-    /* 4枚並ぶと横幅が狭くなるので、月と説明の余白を微調整 */
-    .event-item span {
-        min-width: 35px;
-        /* 月の幅を少し詰めました */
-        font-size: 1rem;
-    }
+/* 年間予定 */
+.term-container {
+    margin: 30px auto;
 }
 
-.topic-img-container {
-    display: flex;
-    /* 横並びにする */
-    justify-content: space-between;
-    /* 画像の間に均等な隙間を作る */
-    gap: 10px;
-    /* 画像同士の具体的な間隔を指定 */
-}
-
-.topic-img {
-    width: 32%;
-    /* 3枚並べる場合、33%弱に設定すると収まりが良い */
-    height: auto;
-    /* 縦横比を維持 */
-    object-fit: cover;
-    /* 画像のサイズがバラバラでも綺麗に切り抜く */
-}
-
-/* カード本体 */
 .term-card {
     background: #ffffff;
     border-radius: 12px;
@@ -359,35 +133,23 @@ hr {
     transform: translateY(-5px);
 }
 
-/* 季節ごとの色分け設定（追加分） */
-.spring-term {
-    border-top-color: #ffb7c5;
-}
+.spring-term    { border-top-color: #ffb7c5; }
+.summer-vacation { border-top-color: #4da6ff; }
+.autumn-term    { border-top-color: #e67e22; }
+.spring-vacation { border-top-color: #95a5a6; }
 
-/* 桜ピンク */
-.summer-vacation {
-    border-top-color: #4da6ff;
-}
-
-/* 夏空ブルー */
-.autumn-term {
-    border-top-color: #e67e22;
-}
-
-/* 紅葉オレンジ */
+.summer-vacation,
 .spring-vacation {
-    border-top-color: #95a5a6;
+    background-color: #fffafb;
 }
 
-/* 冬山グレー */
-
-/* 見出し（上智エンジ色 #9A003D） */
 .term-header {
     background-color: var(--head-background-color);
     color: #ffffff;
     padding: 12px 18px;
     font-weight: bold;
     font-size: 1.05rem;
+    font-family: 'Noto Serif JP', serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -401,7 +163,6 @@ hr {
     opacity: 0.9;
 }
 
-/* 行事リスト */
 .event-list {
     padding: 10px 15px;
 }
@@ -417,32 +178,17 @@ hr {
     border-bottom: none;
 }
 
-/* 元の .event-item span 内の color: var(--head-background-color); は消します */
 .event-item span {
     font-weight: bold;
     min-width: 45px;
     font-size: 1.1rem;
-    /* color: var(--head-background-color); ← ここを削除 */
 }
 
-/* 季節ごとに月の色を指定（追加分） */
-.spring-term .event-item span {
-    color: #d16a7d;
-}
+.spring-term     .event-item span { color: #d16a7d; }
+.summer-vacation .event-item span { color: #2d89c9; }
+.autumn-term     .event-item span { color: #a3530d; }
+.spring-vacation .event-item span { color: #525e5f; }
 
-.summer-vacation .event-item span {
-    color: #2d89c9;
-}
-
-.autumn-term .event-item span {
-    color: #a3530d;
-}
-
-.spring-vacation .event-item span {
-    color: #525e5f;
-}
-
-/* 行事の内容テキスト */
 .event-item p {
     margin: 0;
     font-size: 0.9rem;
@@ -452,48 +198,55 @@ hr {
     text-align: left;
 }
 
-/* 休み期間カードの背景色を微調整 */
-.summer-vacation,
-.spring-vacation {
-    background-color: #fffafb;
+/* 写真グリッド（3枚均等横並び） */
+.topic-img-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 1.5rem;
 }
 
-/* フッター全体のスタイル */
-footer {
-    background-color: #f8f8f8;
-    /* 軽いグレーで区切りを作る */
-    padding: 40px 0 20px;
-    text-align: center;
-    border-top: 1px solid #ddd;
-    margin-top: 50px;
+.topic-img-container .topic-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-/* SNSエリアの調整 */
-.sns {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+.site-footer .headline {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: inherit;
+    letter-spacing: normal;
+    color: inherit;
+    border-left: none;
+    padding-left: 0;
+    margin: 0 0 5px 0;
+    display: block;
 }
 
-.sns li {
-    padding: 20px 20px;
+/* 年間予定：600px以上で4列 */
+@media screen and (min-width: 600px) {
+    .term-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 15px;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .event-item span {
+        min-width: 35px;
+        font-size: 1rem;
+    }
 }
 
-.sns img {
-    transition: opacity 0.3s;
-}
+/* スマホ：写真を縦積み */
+@media (max-width: 600px) {
+    .topic-img-container {
+        grid-template-columns: 1fr;
+    }
 
-.sns img:hover {
-    opacity: 0.7;
-}
-
-/* コピーライト */
-.copyright {
-    font-size: 0.8rem;
-    color: #888;
-    margin-top: 30px;
-    letter-spacing: 0.05em;
-    font-family: "Times New Roman", serif;
+    .topic-img-container .topic-img {
+        height: 220px;
+    }
 }

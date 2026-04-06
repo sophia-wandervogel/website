@@ -1,0 +1,344 @@
+/* ==============================
+   共通ヘッダー・ナビゲーション CSS
+   全ページで共有 (header.css)
+================================ */
+
+:root {
+    --head-background-color: #862030;
+    --head-font-color: #ffffff;
+    --info-background-color: #862030;
+    --info-font-color: #EFEFEF;
+    --background-color: #fffefe;
+    --font-color: #454545;
+    --btn-background-color: #862030;
+    --btn-font-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    color: var(--font-color);
+    background-color: #f7f5f2;
+    background-image: radial-gradient(rgba(46,74,90,0.13) 1px, transparent 1px);
+    background-size: 22px 22px;
+    background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6,
+.site-title, .en-title,
+.catch-title, .catch-subtitle,
+.top-headline, .top-line, .headline {
+    font-family: 'Noto Serif JP', serif;
+}
+
+/* ヘッダー */
+header {
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-inner {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--head-background-color);
+    box-shadow: 0px 3px 3px -2px #aaa;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: 80px;
+    padding-left: 15px;
+    padding-right: 55px;
+    min-width: 0;
+}
+
+.header-emblem img {
+    height: 55px;
+    width: auto;
+    display: block;
+}
+
+.site-title {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--head-font-color);
+    line-height: 1.2;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.en-title {
+    display: none;
+    margin: 0;
+    font-size: 1rem;
+    color: var(--head-font-color);
+    letter-spacing: 0.05em;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: bold;
+}
+
+/* ハンバーガーボタン */
+.humburger-info {
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    color: var(--info-font-color);
+    background-color: var(--head-background-color);
+    border: 1px solid var(--head-font-color);
+    border-radius: 50%;
+    position: fixed;
+    top: 19px;
+    right: 10px;
+    z-index: 1005;
+}
+
+.nav-toggle {
+    display: block;
+    position: relative;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+}
+
+.nav-toggle i {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--head-font-color);
+    position: absolute;
+    transform-origin: center center;
+    transition: transform .5s, opacity .5s;
+}
+
+.nav-toggle i:nth-child(1) { top: 0; }
+.nav-toggle i:nth-child(2) { top: 0; bottom: 0; margin: auto; }
+.nav-toggle i:nth-child(3) { bottom: 0; }
+
+.nav-toggle.show i:nth-child(1) { transform: translateY(9.5px) rotate(-45deg); }
+.nav-toggle.show i:nth-child(2) { opacity: 0; }
+.nav-toggle.show i:nth-child(3) { transform: translateY(-9.5px) rotate(45deg); }
+
+/* ハンバーガーメニュー展開 */
+.nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+}
+
+.nav.show {
+    background: var(--info-background-color);
+    color: var(--info-font-color);
+    opacity: 1;
+    visibility: visible;
+    z-index: 1004;
+}
+
+.nav-menu-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu-li {
+    border-top: 2px solid var(--info-font-color);
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.nav-menu-li a {
+    color: var(--info-font-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* デスクトップナビ（モバイルは非表示） */
+.desktop-nav {
+    display: none;
+}
+
+/* スクロールアニメーション */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fade-in-section {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* トップへ戻るボタン */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background-color: var(--head-background-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, background-color 0.2s;
+    z-index: 900;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    background-color: #6a1826;
+}
+
+/* 山のシルエット区切り */
+.mountain-divider {
+    width: 100%;
+    height: 180px;
+    margin-top: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 180' preserveAspectRatio='none'%3E%3Cpath d='M0,155 L200,115 L340,135 L480,88 L600,115 L720,82 L860,108 L1000,78 L1120,102 L1260,80 L1380,98 L1440,85 L1440,180 L0,180 Z' fill='%23ccd8e0'/%3E%3Cpath d='M0,168 L160,138 L280,155 L400,115 L520,145 L660,108 L800,138 L940,100 L1060,132 L1180,102 L1320,128 L1440,112 L1440,180 L0,180 Z' fill='%237a9faf'/%3E%3Cpath d='M0,178 L120,158 L240,172 L380,145 L520,168 L660,140 L820,165 L960,132 L1100,158 L1240,138 L1380,155 L1440,145 L1440,180 L0,180 Z' fill='%232e4a5a'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/* フッター */
+footer {
+    padding: 60px 0;
+    text-align: center;
+    color: #aaa;
+}
+
+.site-footer .headline {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: inherit;
+    letter-spacing: normal;
+    color: inherit;
+    border-left: none;
+    padding-left: 0;
+    margin: 0 0 5px 0;
+    display: block;
+}
+
+.sns {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.sns li {
+    padding: 20px;
+}
+
+.sns img {
+    transition: opacity 0.3s;
+}
+
+.sns img:hover {
+    opacity: 0.7;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 30px;
+    letter-spacing: 0.05em;
+    font-family: 'Noto Serif JP', serif;
+}
+
+/* PC用ヘッダー・ナビゲーション (768px以上) */
+@media screen and (min-width: 768px) {
+    .header-emblem img {
+        height: 70px;
+    }
+
+    .site-title {
+        font-size: 1.4rem;
+        line-height: 1.1;
+    }
+
+    .en-title {
+        display: block;
+    }
+
+    .header-info {
+        padding-left: 25px;
+        padding-right: 0;
+    }
+
+    .desktop-nav {
+        display: flex;
+        margin-left: auto;
+        gap: 25px;
+        padding-right: 70px;
+        align-items: center;
+    }
+
+    .desktop-nav a {
+        color: var(--head-font-color);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-family: 'Noto Serif JP', serif;
+        letter-spacing: 0.05em;
+        padding: 6px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 20px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
+        background-color: #ffffff;
+        color: var(--head-background-color);
+    }
+}
+
+.nav-menu-li a.active {
+    font-weight: bold;
+    opacity: 0.7;
+}
