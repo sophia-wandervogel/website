@@ -1,5 +1,8 @@
 $('.nav-toggle').on('click', function () {
     $('.nav-toggle, .nav').toggleClass('show');
+    const expanded = $(this).hasClass('show');
+    $(this).attr('aria-expanded', expanded);
+    $(this).attr('aria-label', expanded ? 'メニューを閉じる' : 'メニューを開く');
 });
 
 // スクロールアニメーション

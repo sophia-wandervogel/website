@@ -4,13 +4,13 @@
 ================================ */
 
 :root {
-    --head-background-color: #862030;
+    --head-background-color: #9A003D;
     --head-font-color: #ffffff;
-    --info-background-color: #862030;
+    --info-background-color: #9A003D;
     --info-font-color: #EFEFEF;
     --background-color: #fffefe;
     --font-color: #454545;
-    --btn-background-color: #862030;
+    --btn-background-color: #9A003D;
     --btn-font-color: #ffffff;
 }
 
@@ -28,6 +28,9 @@ body {
     background-image: radial-gradient(rgba(46,74,90,0.13) 1px, transparent 1px);
     background-size: 22px 22px;
     background-attachment: fixed;
+    line-break: strict;
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -68,6 +71,12 @@ header {
     min-width: 0;
 }
 
+.header-emblem {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
 .header-emblem img {
     height: 55px;
     width: auto;
@@ -76,12 +85,13 @@ header {
 
 .site-title {
     display: block;
-    font-size: 0.9rem;
+    font-size: clamp(0.7rem, 3.8vw, 0.9rem);
     font-weight: bold;
     text-decoration: none;
     color: var(--head-font-color);
     line-height: 1.2;
     font-family: 'Noto Serif JP', serif;
+    white-space: nowrap;
 }
 
 .en-title {
@@ -89,6 +99,7 @@ header {
     margin: 0;
     font-size: 1rem;
     color: var(--head-font-color);
+    text-decoration: none;
     letter-spacing: 0.05em;
     font-family: 'Noto Serif JP', serif;
     font-weight: bold;
@@ -165,16 +176,90 @@ header {
 }
 
 .nav-menu-li {
-    border-top: 2px solid var(--info-font-color);
-    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.25);
     width: 100%;
-    padding: 20px 0;
+}
+
+.nav-menu-li:last-child {
+    border-bottom: 1px solid rgba(255,255,255,0.25);
 }
 
 .nav-menu-li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 28px;
     color: var(--info-font-color);
     text-decoration: none;
+    transition: background 0.2s;
+}
+
+.nav-menu-li a:hover,
+.nav-menu-li a.active {
+    background: rgba(255,255,255,0.1);
+}
+
+.nav-menu-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.nav-menu-ja {
     font-size: 1.1rem;
+    font-family: 'Noto Serif JP', serif;
+    letter-spacing: 0.08em;
+}
+
+.nav-menu-en {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-family: 'Oswald', sans-serif;
+}
+
+.nav-menu-arrow {
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+/* メニュー下部 */
+.nav-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0 24px;
+}
+
+.nav-tagline {
+    font-family: 'Hannari', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+.nav-sns-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-sns-links a {
+    color: var(--info-font-color);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.nav-sns-links a:hover {
+    opacity: 1;
 }
 
 /* デスクトップナビ（モバイルは非表示） */
@@ -231,7 +316,7 @@ header {
 }
 
 #back-to-top:hover {
-    background-color: #6a1826;
+    background-color: #6d0029;
 }
 
 /* 山のシルエット区切り */

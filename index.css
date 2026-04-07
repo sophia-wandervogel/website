@@ -115,9 +115,9 @@
 .top-headline {
     color: var(--font-color);
     text-align: center;
-    font-size: 1.5rem;
+    font-size: clamp(1.05rem, 4.5vw, 1.5rem);
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* スクロール矢印 */
@@ -214,7 +214,9 @@
 }
 
 .box-btn a:hover {
-    background-color: #6a1826;
+    background-color: #6d0029;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .box-btn-txt {
@@ -271,6 +273,7 @@
     opacity: 0.7;
     margin-top: 12px;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .shinkan-actions {
@@ -295,22 +298,43 @@
     opacity: 0.85;
 }
 
+.line-share-wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-top: 16px;
+    border-top: 1px dashed #ccc;
+}
+
+.line-share-label {
+    font-size: 0.75rem;
+    color: #888;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
 .line-share-btn {
     display: inline-flex;
     align-items: center;
+    gap: 10px;
     background-color: #06C755;
     color: #fff;
     text-decoration: none;
-    padding: 10px 22px;
-    border-radius: 20px;
-    font-size: 0.9rem;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 1rem;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 2px 6px rgba(6, 199, 85, 0.35);
 }
 
 .line-share-btn:hover {
     background-color: #05a548;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(6, 199, 85, 0.45);
 }
 
 /* Instagramフィードセクション */

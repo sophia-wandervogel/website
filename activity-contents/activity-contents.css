@@ -27,13 +27,13 @@ main {
 }
 
 .headline {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 4vw, 1.2rem);
     font-weight: bold;
     margin-top: 1.2rem;
     margin-bottom: 0.8rem;
     border-left: 4px solid var(--head-background-color);
     padding-left: 12px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .headline-bold {
@@ -112,6 +112,8 @@ hr {
     margin-bottom: 8px;
     border-bottom: 1px solid #eee;
     padding-bottom: 5px;
+    font-size: clamp(0.82rem, 3.5vw, 0.95rem);
+    line-height: 1.6;
 }
 
 /* 年間予定 */
@@ -224,19 +226,26 @@ hr {
     display: block;
 }
 
-/* 年間予定：600px以上で4列 */
+/* 年間予定：タブレットで2列 */
 @media screen and (min-width: 600px) {
     .term-container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 15px;
         width: 100%;
-        max-width: 1200px;
     }
 
     .event-item span {
         min-width: 35px;
         font-size: 1rem;
+    }
+}
+
+/* 年間予定：PC（1024px以上）で4列 */
+@media screen and (min-width: 1024px) {
+    .term-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: 1200px;
     }
 }
 

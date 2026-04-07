@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>上智大学体育会ワンダーフォーゲル部</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="上智大学の体育会所属ワンダーフォーゲル部です。">
+    <meta name="description" content="上智大学体育会ワンダーフォーゲル部の公式サイト。1957年創部、無雪期登山を中心に活動。新歓山行・部活情報・SNS更新はこちら。">
     <meta property="og:title" content="上智大学ワンダーフォーゲル部" />
     <meta property="og:description" content="上智大学の体育会所属ワンダーフォーゲル部です。" />
     <meta property="og:type" content="website" />
@@ -15,28 +15,66 @@
     <meta property="og:site_name" content="上智大学ワンダーフォーゲル部" />
 
     <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:locale" content="ja_JP" />
 
+    <link rel="canonical" href="https://sophia-wandervogel.github.io/website/">
     <link rel="icon" href="images/DSC_logo_sophia.png">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="index.css?v=6">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&family=Oswald:wght@500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet"></noscript>
 
-    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/earlyaccess/hannari.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet"></noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsClub",
+      "name": "上智大学体育会ワンダーフォーゲル部",
+      "alternateName": ["Sophia Wander Vogel", "上智ワンゲル", "SWV"],
+      "url": "https://sophia-wandervogel.github.io/website/",
+      "logo": "https://sophia-wandervogel.github.io/website/images/DSC_logo_sophia.png",
+      "description": "上智大学体育会所属のワンダーフォーゲル部。1957年創部。無雪期登山を主として、離島遠征・スキー・ボルダリングなど幅広いアウトドア活動を行っています。",
+      "foundingDate": "1957",
+      "sport": "登山",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "上智大学",
+        "url": "https://www.sophia.ac.jp/"
+      },
+      "sameAs": [
+        "https://www.instagram.com/sophia_wandervogel/",
+        "https://twitter.com/wv_sophia",
+        "https://ja-jp.facebook.com/wangerusophia.hp/"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://sophia-wandervogel.github.io/website/",
+      "name": "上智大学体育会ワンダーフォーゲル部",
+      "description": "上智大学体育会ワンダーフォーゲル部の公式Webサイト",
+      "inLanguage": "ja"
+    }
+    </script>
 </head>
 
 <body>
     <div id="root">
         <header>
             <div class="header-inner">
-                <div class="header-emblem">
+                <a href="index.html" class="header-emblem">
                     <img src="images/DSC_logo_sophia.png" alt="logo">
-                </div>
+                </a>
                 <div class="header-info">
                     <a href="index.html" class="site-title">上智大学体育会ワンダーフォーゲル部</a>
-                    <p class="en-title">Sophia Wander Vogel</p>
+                    <a href="index.html" class="en-title">Sophia Wander Vogel</a>
                 </div>
                 <nav class="desktop-nav">
                     <a href="index.html" class="active">TOP</a>
@@ -48,16 +86,44 @@
         </header>
 
         <div class="humburger-info">
-            <span class="nav-toggle">
+            <span class="nav-toggle" role="button" aria-label="メニューを開く" aria-expanded="false">
                 <i></i><i></i><i></i>
             </span>
             <nav class="nav">
                 <ul class="nav-menu-ul">
-                    <li class="nav-menu-li"><a href="index.html" class="active">TOP</a></li>
-                    <li class="nav-menu-li"><a href="activity-contents/activity-contents.html">活動内容</a></li>
-                    <li class="nav-menu-li"><a href="hyutte/hyutte.html">保有ヒュッテ</a></li>
-                    <li class="nav-menu-li"><a href="link/link.html">リンク集</a></li>
+                    <li class="nav-menu-li">
+                        <a href="index.html" class="active">
+                            <span class="nav-menu-label"><span class="nav-menu-ja">TOP</span><span class="nav-menu-en">Home</span></span>
+                            <span class="nav-menu-arrow">›</span>
+                        </a>
+                    </li>
+                    <li class="nav-menu-li">
+                        <a href="activity-contents/activity-contents.html">
+                            <span class="nav-menu-label"><span class="nav-menu-ja">活動内容</span><span class="nav-menu-en">Activities</span></span>
+                            <span class="nav-menu-arrow">›</span>
+                        </a>
+                    </li>
+                    <li class="nav-menu-li">
+                        <a href="hyutte/hyutte.html">
+                            <span class="nav-menu-label"><span class="nav-menu-ja">保有ヒュッテ</span><span class="nav-menu-en">Mountain Hut</span></span>
+                            <span class="nav-menu-arrow">›</span>
+                        </a>
+                    </li>
+                    <li class="nav-menu-li">
+                        <a href="link/link.html">
+                            <span class="nav-menu-label"><span class="nav-menu-ja">リンク集</span><span class="nav-menu-en">Links</span></span>
+                            <span class="nav-menu-arrow">›</span>
+                        </a>
+                    </li>
                 </ul>
+                <div class="nav-footer">
+                    <p class="nav-tagline">非日常をあなたと共に</p>
+                    <div class="nav-sns-links">
+                        <a href="https://www.instagram.com/sophia_wandervogel/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://twitter.com/wv_sophia" target="_blank" rel="noopener noreferrer">X</a>
+                        <a href="https://ja-jp.facebook.com/wangerusophia.hp/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    </div>
+                </div>
             </nav>
         </div>
 
@@ -66,12 +132,12 @@
                 <div class="catch-overlay"></div>
                 <div id="slideshow">
                     <img src="images/DSC_fuji.jpg" alt="富士山" class="active">
-                    <img src="images/DSC_hinoiri.jpg" alt="日の入り">
-                    <img src="images/DSC_uraginza.jpg" alt="裏銀座縦走">
-                    <img src="images/DSC_sekkun.jpg" alt="雪訓の様子">
-                    <img src="images/DSC_tanigawa.jpg" alt="谷川岳">
-                    <img src="images/DSC_warusawa.jpg" alt="悪沢岳">
-                    <img src="images/DSC_tubakuro.jpg" alt="燕岳">
+                    <img data-src="images/DSC_hinoiri.jpg" alt="日の入り">
+                    <img data-src="images/DSC_uraginza.jpg" alt="裏銀座縦走">
+                    <img data-src="images/DSC_sekkun.jpg" alt="雪訓の様子">
+                    <img data-src="images/DSC_tanigawa.jpg" alt="谷川岳">
+                    <img data-src="images/DSC_warusawa.jpg" alt="悪沢岳">
+                    <img data-src="images/DSC_tubakuro.jpg" alt="燕岳">
                 </div>
                 <div class="catch-text">
                     <h2 class="catch-title">SOPHIA WANDER VOGEL</h2>
@@ -91,7 +157,7 @@
             <div class="container" id="main-content">
                 <section class="top-topic">
                     <div class="top-topic-txt">
-                        <h2 class="top-headline font"><strong>上智大学体育会ワンダーフォーゲル部<br>公式Webサイト</strong></h2>
+                        <h2 class="top-headline font">ワンダーフォーゲル部について</h2>
                         <hr>
                         <p>1957年創部。私たちは無雪期登山を主として活動している部活動です。</p>
                         <p>登山以外にも、離島遠征・スキースノーシュー・ボルダリングなどアウトドア活動を行っています。</p>
@@ -99,12 +165,12 @@
                     </div>
                 </section>
 
-                <a class="arrow" href="#main-content">
+                <a class="arrow" href="#shinkan-section">
                     <div class="arrow-box"><span class="arrow-bottom"></span></div>
                     <p>Scroll</p>
                 </a>
 
-                <section class="shinkan-section">
+                <section class="shinkan-section" id="shinkan-section">
                     <div class="shinkan-head">
                         <h2 class="shinkan-title">🌿 新入生の方へ</h2>
                         <p class="shinkan-sub">入部・新歓山行に関する情報はSNSをチェック！</p>
@@ -113,16 +179,17 @@
                     <div class="shinkan-actions">
                         <a href="https://www.instagram.com/sophia_wandervogel/" target="_blank" rel="noopener noreferrer" class="shinkan-sns-btn" style="background:#E1306C;">Instagram</a>
                         <a href="https://twitter.com/wv_sophia" target="_blank" rel="noopener noreferrer" class="shinkan-sns-btn" style="background:#000;">X (Twitter)</a>
-                        <a href="https://www.facebook.com/wangerusophia.hp" target="_blank" rel="noopener noreferrer" class="shinkan-sns-btn" style="background:#1877F2;">Facebook</a>
+                        <a href="https://ja-jp.facebook.com/wangerusophia.hp/" target="_blank" rel="noopener noreferrer" class="shinkan-sns-btn" style="background:#1877F2;">Facebook</a>
                     </div>
                     <p class="shinkan-note">※Instagram・X・Facebookすべて同じ情報を発信しています。見やすいものをご利用ください。</p>
-                    <div style="margin-top: 16px; display: flex; justify-content: center;">
+                    <div class="line-share-wrapper">
+                        <p class="line-share-label">このページをシェア</p>
                         <a href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fsophia-wandervogel.github.io%2Fwebsite%2F"
                             target="_blank" rel="noopener noreferrer" class="line-share-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" style="vertical-align:middle; margin-right:7px;">
-                                <path d="M12 2C6.48 2 2 6.03 2 11c0 3.07 1.6 5.8 4.1 7.55-.18.65-.66 2.37-.76 2.74-.12.44.16.44.34.32.14-.1 1.84-1.25 2.58-1.76.54.08 1.1.12 1.74.12 5.52 0 10-4.03 10-9S17.52 2 12 2zm-3.5 12H7v-5.5h1.5V14zm2.75 0h-1.5V8.5h1.5V14zm4.25 0h-1.5l-2-3.25V14h-1.5V8.5H12l2 3.27V8.5h1.5V14z"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" style="flex-shrink:0;">
+                                <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
                             </svg>
-                            LINEでシェア
+                            <span>友だちに送る</span>
                         </a>
                     </div>
                 </section>
@@ -139,13 +206,9 @@
                 <section class="insta-feed-section">
                     <div class="insta-feed-header">
                         <h3 class="insta-feed-title">最新の投稿</h3>
-                        <a href="https://www.instagram.com/sophia_wandervogel/" target="_blank" rel="noopener noreferrer" class="insta-profile-link">
-                            <img src="images/Instagram_Glyph_Gradient_RGB.png" alt="Instagram" width="18" height="18">
-                            @sophia_wandervogel
-                        </a>
                     </div>
                     <div class="insta-feed-body">
-                        <!-- LightWidgetのIDを取得後、下記のiframe src内の YOUR_WIDGET_ID を置き換えてください -->
+                        <!-- YOUR_WIDGET_ID を取得後、下記の YOUR_WIDGET_ID を置き換えてください -->
                         <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
                         <iframe src="https://lightwidget.com/widgets/YOUR_WIDGET_ID.html"
                             scrolling="no"
@@ -232,8 +295,23 @@
             const images = document.querySelectorAll('#slideshow img');
             const dots = document.querySelectorAll('.dot');
             let currentIndex = 0;
+            let lazyLoaded = false;
             if (images.length <= 1) return;
+
+            // 最初の切り替え前に残りの画像を読み込む
+            function lazyLoadRest() {
+                if (lazyLoaded) return;
+                lazyLoaded = true;
+                images.forEach(img => {
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        delete img.dataset.src;
+                    }
+                });
+            }
+
             setInterval(() => {
+                lazyLoadRest();
                 images[currentIndex].classList.remove('active');
                 if (dots[currentIndex]) dots[currentIndex].classList.remove('active');
                 currentIndex = (currentIndex + 1) % images.length;
