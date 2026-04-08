@@ -64,11 +64,12 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: auto;
+    flex: 1;
     height: 80px;
     padding-left: 15px;
     padding-right: 55px;
     min-width: 0;
+    overflow: hidden;
 }
 
 .header-emblem {
