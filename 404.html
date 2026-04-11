@@ -2,7 +2,8 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>ページが見つかりません</title>
+    <meta http-equiv="refresh" content="0; url=https://sophia-wandervogel.github.io/website/">
+    <title>ページを移動しました</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
         h1 { color: #9A003D; }
@@ -13,19 +14,10 @@
 </head>
 <body>
     <h1>404 - ページが見つかりません</h1>
-    <p>お探しのページは移動または削除された可能性があります。</p>
-    <p><a href="https://sophia-wandervogel.github.io/website/">トップページに戻る</a></p>
+    <p>古いページはトップページに移動しました。自動的にリダイレクトします。</p>
+    <p><a href="https://sophia-wandervogel.github.io/website/">こちらをクリックしてトップページへ</a></p>
     <script>
-        // 古いURLのリダイレクト
-        const oldPaths = [
-            '/website/contact/contact.html',
-            '/website/freshman/freshman.html',
-            '/website/members/members.html',
-            '/website/club-members/club-members.html'
-        ];
-        if (oldPaths.includes(window.location.pathname)) {
-            window.location.href = 'https://sophia-wandervogel.github.io/website/';
-        }
+        window.location.replace('https://sophia-wandervogel.github.io/website/');
     </script>
 </body>
 </html>
