@@ -72,18 +72,6 @@ header {
     overflow: hidden;
 }
 
-.header-emblem {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.header-emblem img {
-    height: 55px;
-    width: auto;
-    display: block;
-}
-
 .site-title {
     display: block;
     font-size: clamp(0.7rem, 3.8vw, 0.9rem);
@@ -379,10 +367,6 @@ footer {
 
 /* PC用ヘッダー・ナビゲーション (768px以上) */
 @media screen and (min-width: 768px) {
-    .header-emblem img {
-        height: 70px;
-    }
-
     .site-title {
         font-size: 1.4rem;
         line-height: 1.1;
