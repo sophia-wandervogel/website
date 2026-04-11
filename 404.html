@@ -17,7 +17,15 @@
     <p>古いページはトップページに移動しました。自動的にリダイレクトします。</p>
     <p><a href="https://sophia-wandervogel.github.io/website/">こちらをクリックしてトップページへ</a></p>
     <script>
-        window.location.replace('https://sophia-wandervogel.github.io/website/');
+        const redirectMap = {
+            '/website/hutte/hutte.html': 'https://sophia-wandervogel.github.io/website/hyutte/hyutte.html',
+            '/website/contact/contact.html': 'https://sophia-wandervogel.github.io/website/',
+            '/website/freshman/freshman.html': 'https://sophia-wandervogel.github.io/website/',
+            '/website/members/members.html': 'https://sophia-wandervogel.github.io/website/',
+            '/website/club-members/club-members.html': 'https://sophia-wandervogel.github.io/website/'
+        };
+        const target = redirectMap[window.location.pathname] || 'https://sophia-wandervogel.github.io/website/';
+        window.location.replace(target);
     </script>
 </body>
 </html>
