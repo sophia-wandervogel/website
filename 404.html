@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ページが見つかりません</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        h1 { color: #9A003D; }
+        p { font-size: 18px; }
+        a { color: #9A003D; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>404 - ページが見つかりません</h1>
+    <p>お探しのページは移動または削除された可能性があります。</p>
+    <p><a href="https://sophia-wandervogel.github.io/website/">トップページに戻る</a></p>
+    <script>
+        // 古いURLのリダイレクト
+        const oldPaths = [
+            '/website/contact/contact.html',
+            '/website/freshman/freshman.html',
+            '/website/members/members.html',
+            '/website/club-members/club-members.html'
+        ];
+        if (oldPaths.includes(window.location.pathname)) {
+            window.location.href = 'https://sophia-wandervogel.github.io/website/';
+        }
+    </script>
+</body>
+</html>
