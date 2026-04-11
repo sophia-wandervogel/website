@@ -67,8 +67,8 @@ header {
     flex: 1;
     height: 80px;
     padding-left: 0;
-    padding-right: 55px;
-    min-width: auto;
+    padding-right: 90px;
+    min-width: 0;
     overflow: visible;
 }
 
@@ -80,7 +80,9 @@ header {
     color: var(--head-font-color);
     line-height: 1.2;
     font-family: 'Noto Serif JP', serif;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .en-title {
