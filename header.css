@@ -81,8 +81,8 @@ header {
     line-height: 1.2;
     font-family: 'Noto Serif JP', serif;
     white-space: normal;
-    overflow-wrap: anywhere;
-    word-break: break-word;
+    overflow-wrap: normal;
+    word-break: keep-all;
 }
 
 .en-title {
@@ -372,6 +372,7 @@ footer {
     .site-title {
         font-size: 1.4rem;
         line-height: 1.1;
+        white-space: nowrap;
     }
 
     .en-title {
