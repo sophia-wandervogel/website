@@ -74,7 +74,7 @@ header {
 
 .site-title {
     display: block;
-    font-size: clamp(0.7rem, 3.8vw, 0.9rem);
+    font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
     color: var(--head-font-color);
@@ -405,6 +405,13 @@ footer {
     .desktop-nav a.active {
         background-color: #ffffff;
         color: var(--head-background-color);
+    }
+}
+
+/* 狭い画面ではデスクトップナビを非表示にしてハンバーガーメニューに切り替え */
+@media screen and (max-width: 960px) {
+    .desktop-nav {
+        display: none;
     }
 }
 
