@@ -7,11 +7,11 @@ $('.nav-toggle').on('click', function () {
 
 // スクロールアニメーション
 document.addEventListener('DOMContentLoaded', function () {
-    var targets = document.querySelectorAll(
+    var fadeInTargets = document.querySelectorAll(
         'section, .top-topic, .news-section, .term-container, .map-container, .info-section, .activity-vertical-container'
     );
-    targets.forEach(function (el) {
-        el.classList.add('fade-in-section');
+    fadeInTargets.forEach(function (element) {
+        element.classList.add('fade-in-section');
     });
 
     var observer = new IntersectionObserver(function (entries) {
@@ -23,26 +23,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }, { threshold: 0.08 });
 
-    document.querySelectorAll('.fade-in-section').forEach(function (el) {
-        observer.observe(el);
+    document.querySelectorAll('.fade-in-section').forEach(function (element) {
+        observer.observe(element);
     });
 });
 
 // トップへ戻るボタン
 window.addEventListener('scroll', function () {
-    var btn = document.getElementById('back-to-top');
-    if (!btn) return;
+    var backToTopButton = document.getElementById('back-to-top');
+    if (!backToTopButton) return;
     if (window.scrollY > 300) {
-        btn.classList.add('visible');
+        backToTopButton.classList.add('visible');
     } else {
-        btn.classList.remove('visible');
+        backToTopButton.classList.remove('visible');
     }
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    var btn = document.getElementById('back-to-top');
-    if (!btn) return;
-    btn.addEventListener('click', function () {
+    var backToTopButton = document.getElementById('back-to-top');
+    if (!backToTopButton) return;
+    backToTopButton.addEventListener('click', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });

@@ -32,7 +32,7 @@ Each section lives in its own directory with a self-contained HTML + CSS pair:
 | `images/` | Photos, logos, social media icons |
 | `illustration/` | Decorative PNGs for activity pages |
 
-`humburger_menu.js` is loaded by every page and provides the responsive navigation toggle.
+`hamburger_menu.js` is loaded by every page and provides the responsive navigation toggle.
 
 ## CSS Conventions
 
