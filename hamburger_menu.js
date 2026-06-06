@@ -1,9 +1,14 @@
-$('.nav-toggle').on('click', function () {
-    $('.nav-toggle, .nav').toggleClass('show');
-    const expanded = $(this).hasClass('show');
-    $(this).attr('aria-expanded', expanded);
-    $(this).attr('aria-label', expanded ? 'メニューを閉じる' : 'メニューを開く');
-});
+// ハンバーガーメニューのトグル
+const navToggle = document.querySelector('.nav-toggle');
+if (navToggle) {
+    navToggle.addEventListener('click', function () {
+        document.querySelector('.nav-toggle').classList.toggle('show');
+        document.querySelector('.nav').classList.toggle('show');
+        const expanded = this.classList.contains('show');
+        this.setAttribute('aria-expanded', expanded);
+        this.setAttribute('aria-label', expanded ? 'メニューを閉じる' : 'メニューを開く');
+    });
+}
 
 // スクロールアニメーション
 document.addEventListener('DOMContentLoaded', function () {
