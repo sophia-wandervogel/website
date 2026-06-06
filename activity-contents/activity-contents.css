@@ -1,29 +1,8 @@
 /* activity-contents.css — ページ固有スタイルのみ（共通部分は index.css に集約済み） */
 
-main {
-    margin-top: 80px;
-    width: 100%;
-}
-
 .container {
-    background-color: transparent;
-    padding-left: 13px;
-    padding-right: 13px;
-    padding-top: 1.8rem;
     max-width: 960px;
     margin: 0 auto;
-}
-
-.top-info {
-    border-left: 6px solid var(--head-background-color);
-    padding-left: 15px;
-    margin-bottom: 25px;
-}
-
-.top-line {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #333;
 }
 
 .headline {
@@ -37,20 +16,9 @@ main {
 }
 
 .headline-bold {
-    font-weight: bold;
     font-size: 1.2rem;
-    font-family: 'Noto Serif JP', serif;
     margin-top: 1.5rem;
     margin-bottom: 0.8rem;
-    color: var(--font-color);
-    border-left: 4px solid var(--head-background-color);
-    padding-left: 12px;
-    line-height: 1.4;
-}
-
-hr {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
 }
 
 .topic + .topic,
@@ -60,6 +28,10 @@ hr {
 
 .topic-box {
     margin-top: 3rem;
+    display: block;
+    max-width: none;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 .topic-img {

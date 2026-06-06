@@ -434,6 +434,44 @@ footer {
     margin: 0 auto;
 }
 
+/* 下層ページ共通レイアウト */
+body.subpage main {
+    width: 100%;
+    margin-top: 80px;
+}
+
+body.subpage .container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.8rem 13px 0;
+}
+
+.page-heading {
+    border-left: 6px solid var(--head-background-color);
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.page-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.section-heading {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: bold;
+    color: var(--font-color);
+    border-left: 4px solid var(--head-background-color);
+    padding-left: 12px;
+    line-height: 1.4;
+}
+
+body.subpage hr {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
 /* ヒーロースライドショー */
 .catch-topic {
     position: relative;
@@ -722,6 +760,18 @@ footer {
 
 .shinkan-sns-btn:hover {
     opacity: 0.85;
+}
+
+.shinkan-sns-btn.instagram {
+    background: #E1306C;
+}
+
+.shinkan-sns-btn.x {
+    background: #000;
+}
+
+.shinkan-sns-btn.facebook {
+    background: #1877F2;
 }
 
 .line-share-wrapper {

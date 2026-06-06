@@ -18,32 +18,34 @@
 ```
 website-main/
 ├── index.html                 # TOPページ
-├── 404.html                   # 旧URLからのリダイレクト
-├── index.css                  # TOPページ専用スタイル
-├── header.css                 # 全ページ共通のヘッダー・共通UI
-├── hamburger_menu.js          # メニュー開閉・スクロール演出
-├── jquery-3.6.0.min.js        # 依存ライブラリ
+├── index.css                  # 共通スタイル + TOPページ固有スタイル
+├── index.js                   # TOPページの初期化スクリプト
 ├── activity-contents/
 │   ├── activity-contents.html # 活動内容ページ
-│   └── activity-contents.css
+│   ├── activity-contents.css
+│   └── index.js
 ├── hyutte/
 │   ├── hyutte.html            # 宝台樹ヒュッテ紹介ページ
-│   └── hyutte.css
+│   ├── hyutte.css
+│   └── index.js
 ├── link/
 │   ├── link.html              # リンク集ページ
-│   └── link.css
+│   ├── link.css
+│   └── index.js
 └── images/                    # 写真・ロゴ・SNSアイコン
 ```
 
 共通ヘッダーやフッターはテンプレート読み込みではなく、各HTMLに直接書かれています。
 そのため、このリポジトリは「ビルドなしの静的サイト」として読むのがいちばん分かりやすい構成です。
 
+ページ固有のCSSファイルは対応するHTMLファイルと同じディレクトリに配置します。
+JavaScriptファイルはページ初期化の役割を持つ `index.js` として、対応するHTMLと同じディレクトリに配置します。
+
 ---
 
 ## 技術スタック
 
 - **HTML5 / CSS3 / Vanilla JavaScript**
-- **jQuery 3.6.0**（ハンバーガーメニューのトグルのみに使用）
 - **Google Fonts**（Noto Serif JP, Noto Sans JP, Oswald, Hannari）
 - ビルドツール・パッケージマネージャーなし
 
@@ -77,12 +79,12 @@ website-main/
 
 | 項目 | 値 |
 |------|-----|
-| ブランドカラー（エンジ） | `#862030` |
+| ブランドカラー（エンジ） | `#9A003D` |
 | テキストカラー | `#454545` |
 | 背景 | `#f7f5f2`（ドットグリッドパターン） |
-| 見出しスタイル | 左側エンジ縦線 `border-left: 4px solid #862030` |
+| 見出しスタイル | 左側エンジ縦線 `border-left: 4px solid #9A003D` |
 
-カラー等の変更は **`header.css` の `:root` 変数** を編集してください。
+カラー等の変更は **`index.css` の `:root` 変数** を編集してください。
 各ページ固有の見た目は `index.css` / `activity-contents/activity-contents.css` / `hyutte/hyutte.css` / `link/link.css` で調整します。
 
 ---

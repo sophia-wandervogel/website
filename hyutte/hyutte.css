@@ -1,29 +1,5 @@
 /* hyutte.css — ページ固有スタイルのみ（共通部分は index.css に集約済み） */
 
-main {
-    margin-top: 80px;
-    width: 100%;
-}
-
-.container {
-    background-color: transparent;
-    padding-left: 13px;
-    padding-right: 13px;
-    padding-top: 1.8rem;
-}
-
-.top-info {
-    border-left: 6px solid var(--head-background-color);
-    padding-left: 15px;
-    margin-bottom: 25px;
-}
-
-.top-line {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #333;
-}
-
 .topic {
     margin-bottom: 2rem;
 }
@@ -34,11 +10,6 @@ main {
     margin-top: 0.3rem;
     margin-bottom: 0.5rem;
     padding-left: 0.5rem;
-}
-
-hr {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
 }
 
 .topic-img {
@@ -55,6 +26,21 @@ hr {
 .map-container iframe {
     width: 100%;
     height: 400px;
+    border: 0;
+}
+
+.map-section-title {
+    margin-top: 24px;
+}
+
+.map-container-compact {
+    margin-top: 10px;
+}
+
+.map-button-area {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .map-btn {
@@ -115,12 +101,8 @@ hr {
 }
 
 .info-section-title {
-    font-family: 'Noto Serif JP', serif;
     font-size: 1rem;
-    font-weight: bold;
     color: #333;
-    border-left: 4px solid var(--head-background-color);
-    padding-left: 12px;
     margin-bottom: 10px;
 }
 
