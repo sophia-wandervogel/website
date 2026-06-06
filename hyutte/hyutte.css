@@ -5,11 +5,17 @@
 }
 
 .headline {
-    font-size: 1.4em;
-    font-weight: lighter;
-    margin-top: 0.3rem;
-    margin-bottom: 0.5rem;
-    padding-left: 0.5rem;
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    font-weight: bold;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+    border-left: 4px solid var(--head-background-color);
+    padding-left: 12px;
+    line-height: 1.5;
+}
+
+.under-border {
+    display: none;
 }
 
 .topic-img {
@@ -93,17 +99,23 @@
 }
 
 .info-section {
-    margin-top: 20px;
-    padding-top: 16px;
+    margin-top: 24px;
+    padding-top: 20px;
     border-top: 1px solid #e0e0e0;
     font-size: 0.9rem;
     line-height: 1.8;
 }
 
 .info-section-title {
+    display: block;
+    border-left: 4px solid var(--head-background-color);
+    padding-left: 12px;
     font-size: 1rem;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: bold;
     color: #333;
     margin-bottom: 10px;
+    line-height: 1.4;
 }
 
 .access-block {
@@ -124,6 +136,18 @@
     font-size: 0.82rem;
     color: #666;
     margin-top: 4px;
+}
+
+.site-footer .headline {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: inherit;
+    letter-spacing: normal;
+    color: inherit;
+    border-left: none;
+    padding-left: 0;
+    margin: 0 0 5px 0;
+    display: block;
 }
 
 @media screen and (min-width: 600px) {

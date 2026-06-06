@@ -22,15 +22,12 @@
 }
 
 .topic + .topic,
-.topic-box + .topic {
+.annual-schedule + .topic {
     margin-top: 3rem;
 }
 
-.topic-box {
+.annual-schedule {
     margin-top: 3rem;
-    display: block;
-    max-width: none;
-    padding: 0;
     margin-bottom: 0;
 }
 

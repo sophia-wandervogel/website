@@ -19,19 +19,16 @@
 website-main/
 ├── index.html                 # TOPページ
 ├── index.css                  # 共通スタイル + TOPページ固有スタイル
-├── index.js                   # TOPページの初期化スクリプト
+├── index.js                   # 全ページ共通の初期化スクリプト
 ├── activity-contents/
 │   ├── activity-contents.html # 活動内容ページ
-│   ├── activity-contents.css
-│   └── index.js
+│   └── activity-contents.css
 ├── hyutte/
 │   ├── hyutte.html            # 宝台樹ヒュッテ紹介ページ
-│   ├── hyutte.css
-│   └── index.js
+│   └── hyutte.css
 ├── link/
 │   ├── link.html              # リンク集ページ
-│   ├── link.css
-│   └── index.js
+│   └── link.css
 └── images/                    # 写真・ロゴ・SNSアイコン
 ```
 
@@ -39,7 +36,7 @@ website-main/
 そのため、このリポジトリは「ビルドなしの静的サイト」として読むのがいちばん分かりやすい構成です。
 
 ページ固有のCSSファイルは対応するHTMLファイルと同じディレクトリに配置します。
-JavaScriptファイルはページ初期化の役割を持つ `index.js` として、対応するHTMLと同じディレクトリに配置します。
+JavaScriptはルート直下の `index.js` に集約し、全ページで共通利用します。
 
 ---
 
