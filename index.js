@@ -1,3 +1,5 @@
+/* jshint esversion: 6, browser: true */
+
 function initMenu() {
     const navToggle = document.querySelector('.nav-toggle');
     const mobileNav = document.querySelector('.nav');
