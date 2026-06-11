@@ -1,39 +1,39 @@
 function initMenu() {
     const navToggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    if (!navToggle || !nav) return;
+    const mobileNav = document.querySelector('.nav');
+    if (!navToggle || !mobileNav) return;
 
     navToggle.addEventListener('click', function () {
         this.classList.toggle('show');
-        nav.classList.toggle('show');
+        mobileNav.classList.toggle('show');
 
-        const expanded = this.classList.contains('show');
-        this.setAttribute('aria-expanded', String(expanded));
-        this.setAttribute('aria-label', expanded ? 'メニューを閉じる' : 'メニューを開く');
+        const isMenuOpen = this.classList.contains('show');
+        this.setAttribute('aria-expanded', String(isMenuOpen));
+        this.setAttribute('aria-label', isMenuOpen ? 'メニューを閉じる' : 'メニューを開く');
     });
 }
 
 function initScrollAnimation() {
-    const fadeInTargets = document.querySelectorAll(
+    const animatedElements = document.querySelectorAll(
         'section, .top-topic, .news-section, .term-container, .map-container, .info-section, .activity-vertical-container'
     );
-    if (!fadeInTargets.length) return;
+    if (!animatedElements.length) return;
 
-    fadeInTargets.forEach(function (element) {
+    animatedElements.forEach(function (element) {
         element.classList.add('fade-in-section');
     });
 
-    const observer = new IntersectionObserver(function (entries) {
+    const scrollObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+                scrollObserver.unobserve(entry.target);
             }
         });
     }, { threshold: 0.08 });
 
-    fadeInTargets.forEach(function (element) {
-        observer.observe(element);
+    animatedElements.forEach(function (element) {
+        scrollObserver.observe(element);
     });
 }
 
@@ -54,12 +54,12 @@ function initSlideshow() {
     const slideshowImages = document.querySelectorAll('#slideshow img');
     const slideshowDots = document.querySelectorAll('.dot');
     let currentIndex = 0;
-    let lazyLoaded = false;
+    let hasLoadedDeferredImages = false;
     if (slideshowImages.length <= 1) return;
 
-    function lazyLoadRest() {
-        if (lazyLoaded) return;
-        lazyLoaded = true;
+    function loadDeferredSlideshowImages() {
+        if (hasLoadedDeferredImages) return;
+        hasLoadedDeferredImages = true;
         slideshowImages.forEach(function (img) {
             if (img.dataset.src) {
                 img.src = img.dataset.src;
@@ -69,7 +69,7 @@ function initSlideshow() {
     }
 
     setInterval(function () {
-        lazyLoadRest();
+        loadDeferredSlideshowImages();
         slideshowImages[currentIndex].classList.remove('active');
         if (slideshowDots[currentIndex]) slideshowDots[currentIndex].classList.remove('active');
         currentIndex = (currentIndex + 1) % slideshowImages.length;

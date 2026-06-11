@@ -1,4 +1,4 @@
-/* activity-contents.css — ページ固有スタイルのみ（共通部分は index.css に集約済み） */
+/* activities.css — ページ固有スタイルのみ（共通部分は site.css に集約済み） */
 
 .container {
     max-width: 960px;
@@ -10,7 +10,7 @@
     font-weight: bold;
     margin-top: 1.2rem;
     margin-bottom: 0.8rem;
-    border-left: 4px solid var(--head-background-color);
+    border-left: 4px solid var(--brand-color);
     padding-left: 12px;
     line-height: 1.5;
 }
@@ -115,7 +115,7 @@
 }
 
 .term-header {
-    background-color: var(--head-background-color);
+    background-color: var(--brand-color);
     color: #ffffff;
     padding: 12px 18px;
     font-weight: bold;
@@ -163,7 +163,7 @@
 .event-item p {
     margin: 0;
     font-size: 0.9rem;
-    color: var(--font-color);
+    color: var(--body-text-color);
     line-height: 1.5;
     flex: 1;
     text-align: left;

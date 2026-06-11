@@ -1,4 +1,4 @@
-/* link.css — ページ固有スタイルのみ（共通部分は index.css に集約済み） */
+/* links.css — ページ固有スタイルのみ（共通部分は site.css に集約済み） */
 
 .topic {
     margin-bottom: 2rem;
@@ -13,7 +13,7 @@
     margin-top: 2.5rem;
     margin-bottom: 1.2rem;
     padding-left: 0.8rem;
-    border-left: 4px solid var(--head-background-color);
+    border-left: 4px solid var(--brand-color);
     line-height: 1.2;
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@
     background-color: #f0f2f5;
     padding: 14px 20px;
     border: 1px solid #e0e0e0;
-    border-left: 6px solid var(--head-background-color);
+    border-left: 6px solid var(--brand-color);
     border-radius: 4px;
     transition: all 0.3s ease;
     font-weight: bold;
@@ -52,15 +52,15 @@
     content: "●";
     margin-right: 15px;
     font-size: 0.7rem;
-    color: var(--head-background-color);
+    color: var(--brand-color);
 }
 
 .sophia-style-list a:hover {
     background-color: #ffffff;
-    border-color: var(--head-background-color);
+    border-color: var(--brand-color);
     transform: translateX(5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    color: var(--head-background-color);
+    color: var(--brand-color);
 }
 
 .link-content {

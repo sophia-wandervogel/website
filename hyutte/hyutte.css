@@ -1,4 +1,4 @@
-/* hyutte.css — ページ固有スタイルのみ（共通部分は index.css に集約済み） */
+/* mountain-hut.css — ページ固有スタイルのみ（共通部分は site.css に集約済み） */
 
 .topic {
     margin-bottom: 2rem;
@@ -9,7 +9,7 @@
     font-weight: bold;
     margin-top: 1.2rem;
     margin-bottom: 0.8rem;
-    border-left: 4px solid var(--head-background-color);
+    border-left: 4px solid var(--brand-color);
     padding-left: 12px;
     line-height: 1.5;
 }
@@ -108,7 +108,7 @@
 
 .info-section-title {
     display: block;
-    border-left: 4px solid var(--head-background-color);
+    border-left: 4px solid var(--brand-color);
     padding-left: 12px;
     font-size: 1rem;
     font-family: 'Noto Serif JP', serif;
