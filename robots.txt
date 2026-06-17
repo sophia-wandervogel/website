@@ -1,4 +1,33 @@
 User-agent: *
 Allow: /
 
+# AI search and user-requested retrieval bots are welcome to crawl this public site.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Training crawlers are currently allowed for this public official site.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://sophia-wandervogel.github.io/website/sitemap.xml

@@ -23,6 +23,8 @@ website-main/
 ├── robots.txt                 # クローラー向けの巡回ルール
 ├── sitemap.xml                # 検索エンジン向けサイトマップ
 ├── llms.txt                   # AI向けのサイト概要ファイル
+├── scripts/
+│   └── update-sitemap-lastmod.ps1 # sitemap.xmlの更新日を自動更新
 ├── activity-contents/
 │   ├── activity-contents.html # 活動内容ページ
 │   └── activities.css
@@ -40,6 +42,11 @@ website-main/
 
 ページ固有のCSSファイルは対応するHTMLファイルと同じディレクトリに配置します。
 JavaScriptはルート直下の `index.js` に集約し、全ページで共通利用します。
+
+`sitemap.xml` の `<lastmod>` は、各HTMLのGit上の最終更新日をもとに
+`scripts/update-sitemap-lastmod.ps1` で更新します。GitHub Actionsでは
+HTML更新時にこのスクリプトを実行し、差分がある場合は `sitemap.xml` を
+自動コミットします。
 
 ---
 
