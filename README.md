@@ -22,6 +22,7 @@ website-main/
 ├── index.js                   # 全ページ共通の初期化スクリプト
 ├── robots.txt                 # クローラー向けの巡回ルール
 ├── sitemap.xml                # 検索エンジン向けサイトマップ
+├── llms.txt                   # AI向けのサイト概要ファイル
 ├── activity-contents/
 │   ├── activity-contents.html # 活動内容ページ
 │   └── activities.css

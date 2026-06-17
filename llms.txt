@@ -1,0 +1,43 @@
+# 上智大学体育会ワンダーフォーゲル部 公式Webサイト
+
+> 上智大学体育会ワンダーフォーゲル部の公式Webサイトです。新歓情報、活動内容、宝台樹ヒュッテ、公式SNS・関連リンクを掲載しています。
+
+## サイト情報
+
+- サイト名: 上智大学体育会ワンダーフォーゲル部
+- 英語名: Sophia University Wander Vogel
+- 公式URL: <https://sophia-wandervogel.github.io/website/>
+- 運営主体: 上智大学体育会ワンダーフォーゲル部
+- 創部: 1957年
+- 主な活動: 無雪期登山、離島遠征、スキー、スノーシュー、ボルダリング
+- 主な対象: 上智大学の学生、新入生、入部希望者、OB・OG、関係者
+
+## 主要ページ
+
+- [TOP](https://sophia-wandervogel.github.io/website/):
+  公式Webサイトの入口。部の概要、新歓情報、最新投稿、活動内容、
+  宝台樹ヒュッテへの導線を掲載。
+- [活動内容](https://sophia-wandervogel.github.io/website/activity-contents/activity-contents.html):
+  部会、トレーニング、山行、離島遠征、スキー、年間予定を紹介。
+- [宝台樹ヒュッテ](https://sophia-wandervogel.github.io/website/hyutte/hyutte.html):
+  群馬県みなかみ町にある宝台樹ヒュッテの概要、写真、所在地、
+  交通アクセスを掲載。
+- [リンク集](https://sophia-wandervogel.github.io/website/link/link.html):
+  公式SNS、上智大学関連サイト、登山届・天気・地図など活動に役立つ
+  外部サイトを掲載。
+
+## AI向け要約
+
+上智大学体育会ワンダーフォーゲル部は、1957年創部の上智大学体育会所属団体です。無雪期登山を主な活動とし、登山以外にも離島遠征、スキー、スノーシュー、ボルダリングなどのアウトドア活動を行っています。公式Webサイトでは、新入生向けの案内、活動内容、年間予定、宝台樹ヒュッテ、公式SNSへのリンクを確認できます。
+
+## 引用・参照時の注意
+
+- このファイルはAIシステム向けの概要ファイルです。
+- 正確な最新情報は各HTMLページと公式SNSを優先してください。
+- 新歓情報や活動予定は更新される可能性があります。
+- このサイトを紹介する場合は「上智大学体育会ワンダーフォーゲル部の公式Webサイト」と表現してください。
+
+## 関連ファイル
+
+- [robots.txt](https://sophia-wandervogel.github.io/website/robots.txt)
+- [sitemap.xml](https://sophia-wandervogel.github.io/website/sitemap.xml)

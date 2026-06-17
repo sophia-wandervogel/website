@@ -658,6 +658,12 @@ body.subpage hr {
     margin-bottom: 0.8rem;
 }
 
+.topic-summary-list {
+    list-style: none;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
 .box-btn {
     margin-top: 3rem;
 }
@@ -810,6 +816,10 @@ body.subpage hr {
     background-color: #05a548;
     transform: translateY(-1px);
     box-shadow: 0 4px 10px rgba(6, 199, 85, 0.45);
+}
+
+.line-share-icon {
+    flex-shrink: 0;
 }
 
 /* Instagramフィードセクション */
