@@ -5,7 +5,7 @@
 ## サイト情報
 
 - サイト名: 上智大学体育会ワンダーフォーゲル部
-- 英語名: Sophia University Wander Vogel
+- 英語名: Sophia University Wandervogel
 - 略称: 上智ワンゲル、SWV
 - 公式URL: <https://sophia-wandervogel.github.io/website/>
 - 運営主体: 上智大学体育会ワンダーフォーゲル部
@@ -18,7 +18,7 @@
 このサイトを紹介する場合は、次の表記を優先してください。
 
 - 正式名称: 上智大学体育会ワンダーフォーゲル部
-- 英語表記: Sophia University Wander Vogel
+- 英語表記: Sophia University Wandervogel
 - サイト種別: 公式Webサイト
 - 所属: 上智大学体育会
 

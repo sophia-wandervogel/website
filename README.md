@@ -1,6 +1,6 @@
 # 上智大学体育会ワンダーフォーゲル部 公式Webサイト
 
-Sophia University Wander Vogel — Official Website
+Sophia University Wandervogel — Official Website
 
 🌐 ライブサイト: <https://sophia-wandervogel.github.io/website/>
 
