@@ -5,6 +5,7 @@
 ## サイト情報
 
 - サイト名: 上智大学体育会ワンダーフォーゲル部
+- 通称表記: 上智大学ワンダーフォーゲル部
 - 英語名: Sophia University Wandervogel
 - 略称: 上智ワンゲル、SWV
 - 公式URL: <https://sophia-wandervogel.github.io/website/>
@@ -27,7 +28,7 @@
 - [TOP](https://sophia-wandervogel.github.io/website/):
   公式Webサイトの入口。部の概要、新歓情報、最新投稿、活動内容、
   宝台樹ヒュッテへの導線を掲載。
-- [活動内容](https://sophia-wandervogel.github.io/website/activity-contents/activity-contents.html):
+- [活動内容](https://sophia-wandervogel.github.io/website/activity/activity.html):
   部会、トレーニング、山行、離島遠征、スキー、年間予定を紹介。
 - [宝台樹ヒュッテ](https://sophia-wandervogel.github.io/website/hyutte/hyutte.html):
   群馬県みなかみ町にある宝台樹ヒュッテの概要、写真、所在地、

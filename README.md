@@ -25,9 +25,9 @@ website-main/
 ├── llms.txt                   # AI向けのサイト概要ファイル
 ├── scripts/
 │   └── update-sitemap-lastmod.ps1 # sitemap.xmlの更新日を自動更新
-├── activity-contents/
-│   ├── activity-contents.html # 活動内容ページ
-│   └── activities.css
+├── activity/
+│   ├── activity.html # 活動内容ページ
+│   └── activity.css
 ├── hyutte/
 │   ├── hyutte.html            # 宝台樹ヒュッテ紹介ページ
 │   └── hyutte.css
@@ -76,7 +76,7 @@ HTML更新時にこのスクリプトを実行し、差分がある場合は `si
 | ページ | URL | 説明 |
 | ------ | --- | ---- |
 | TOP | `/index.html` | スライドショー・部の紹介・新歓SNS案内 |
-| 活動内容 | `/activity-contents/activity-contents.html` | 部会・トレ・山行・年間予定 |
+| 活動内容 | `/activity/activity.html` | 部会・トレ・山行・年間予定 |
 | 保有ヒュッテ | `/hyutte/hyutte.html` | 宝台樹ヒュッテの紹介・アクセス情報 |
 | リンク集 | `/link/link.html` | 上智大学関連・実用サイトへのリンク |
 
@@ -92,7 +92,7 @@ HTML更新時にこのスクリプトを実行し、差分がある場合は `si
 | 見出しスタイル | 左側エンジ縦線 `border-left: 4px solid #9A003D` |
 
 カラー等の変更は **`index.css` の `:root` 変数** を編集してください。
-各ページ固有の見た目は `index.css` / `activity-contents/activities.css` /
+各ページ固有の見た目は `index.css` / `activity/activity.css` /
 `hyutte/hyutte.css` / `link/links.css` で調整します。
 
 ---
